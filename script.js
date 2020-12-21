@@ -165,3 +165,9 @@ function endQuiz() {
         window.location = "highscores.html";
     });
 }
+
+//Function to stop the timer countdown
+function stopTimer() {
+    timeLeft.textContent = countdown;
+    clearInterval(timerInterval);
+}
