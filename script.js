@@ -31,7 +31,6 @@ function startTimer() {
     }
 }
 
-
 //Function to start code quiz
 function startQuiz() {
     //Current question start
@@ -46,4 +45,46 @@ function startQuiz() {
     //Create unordered list for multiple choice answers
     var quizAnswers = document.createElement("ul");
     quizAnswers.setAttribute("class", "quiz-answers");
+    //For loop that creates buttons for each multiple choice answer
+    for (var i = 0; i < 4; i++) {
+        //Make each multiple choice answer a list item
+        //Create button for each multiple choice answer
+        var listEl = document.createElement("li");
+        var buttonEl = document.createElement("button");
+        buttonEl.setAttribute("class", "quiz-answer");
+        buttonEl.setAttribute("quiz-body", i);
+        //Set button content
+        buttonEl.textContent = questions[currentQuestion].choices[i];
+        //Append buttons to list items and list items to quiz answers
+        listEl.appendChild(buttonEl);
+        quizAnswers.appendChild(listEl);
+    }
+    //Append questions and answers to quiz
+    quiz.appendChild(quizQuestion);
+    quiz.appendChild(quizAnswers);
+    //Replace quiz body with quiz intro
+    quizBody.replaceChild(quiz, quizIntro);
+    //All multiple choice buttons variable
+    var choiceButtons = quizAnswers.querySelectorAll("button");
+    //Event listener for quiz response
+    //If user selects answer, run compare answer function and move to next
+    //question. If user has answered all questions stop timer and end quiz
+    quizAnswers.addEventListener("click", function (event) {
+        var element = event.target;
+        if (element.matches("button")) {
+            var buttonID = element.getAttribute("quiz-body");
+            compareAnswer(currentQuestion, buttonID);
+            currentQuestion++;
+            if (currentQuestion === questions.length) {
+                stopTimer();
+                endQuiz();
+                return;
+            }
+            //For loop for displaying multiple choice options for each quiz question
+            quizQuestion.textContent = questions[currentQuestion].question;
+            for (var j = 0; j < 4; j++) {
+                choiceButtons[j].textContent = questions[currentQuestion].choices[j];
+            }
+        }
+    });
 }
