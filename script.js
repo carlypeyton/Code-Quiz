@@ -198,3 +198,8 @@ function getHighscores() {
        return;
    }
 }
+
+//If any scores are saved than run show scores function
+if (highscoreList !== null) {
+    showHighscores();
+}
