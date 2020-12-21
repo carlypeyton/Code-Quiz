@@ -222,3 +222,16 @@ function showHighscores() {
         highscoreList.appendChild(listEl);
     }
 }
+
+//Function to save score, run get highscores
+//New initials and new score as parameters
+function saveScore(newInitials, newScore) {
+    getHighscores();
+    //push new initials and score to highscores
+    highscores.initials.push(newInitials);
+    highscores.scores.push(newScore);
+    //Change highscores to string from array
+    var highscoresString = JSON.stringify(highscores);
+    //Save highscores to local storage
+    localStorage.setItem("highscores", highscoresString);
+}
