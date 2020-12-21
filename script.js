@@ -30,3 +30,20 @@ function startTimer() {
         }, 1000);
     }
 }
+
+
+//Function to start code quiz
+function startQuiz() {
+    //Current question start
+    var currentQuestion = 0;
+    //Create div for quiz questions and answers
+    quiz = document.createElement("div");
+    quiz.setAttribute("class", "quiz-content");
+    //Create element for quiz question and display current question
+    var quizQuestion = document.createElement("h3");
+    quizQuestion.setAttribute("class", "quiz-question");
+    quizQuestion.textContent = questions[currentQuestion].question;
+    //Create unordered list for multiple choice answers
+    var quizAnswers = document.createElement("ul");
+    quizAnswers.setAttribute("class", "quiz-answers");
+}
