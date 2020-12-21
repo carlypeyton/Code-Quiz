@@ -171,3 +171,12 @@ function stopTimer() {
     timeLeft.textContent = countdown;
     clearInterval(timerInterval);
 }
+
+////////////////////////HIGHSCORES PAGE HTML//////////////////////////////
+//Assign varaibles for DOM
+var highscoreList = document.querySelector("#highscore-list");
+//Create highscores object with arrays for future initials and scores
+var highscores = {
+    initials: [],
+    scores: [],
+};
