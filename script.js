@@ -180,3 +180,21 @@ var highscores = {
     initials: [],
     scores: [],
 };
+
+//Function to get highscores
+function getHighscores() {
+    //As long as there is at least 1 saved highscore, get highscores from local storage
+   var savedHighscoresString = localStorage.getItem("highscores");
+   if (savedHighscoresString !== null) {
+       //Parse highscores string
+       var savedHighscores = JSON.parse(savedHighscoresString);
+       highscores.initials = savedHighscores.initials; 
+       highscores.scores = savedHighscores.scores;
+   }
+   //If no highscores in list display empty array
+   else {
+       highscores.initials = [];
+       highscores.scores = [];
+       return;
+   }
+}
