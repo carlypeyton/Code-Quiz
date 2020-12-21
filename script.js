@@ -235,3 +235,10 @@ function saveScore(newInitials, newScore) {
     //Save highscores to local storage
     localStorage.setItem("highscores", highscoresString);
 }
+
+//function to clear highscores, run show highscores
+function clearHighscores() {
+    //remove highscore from local storage
+    localStorage.removeItem("highscores");
+    showHighscores();
+}
