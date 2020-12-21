@@ -203,3 +203,22 @@ function getHighscores() {
 if (highscoreList !== null) {
     showHighscores();
 }
+
+//function to show highscores, run get highscores
+function showHighscores() {
+    //Set highscore list equal to empty string
+    highscoreList.innerHTML = "";
+    getHighscores();
+    //As long as i < total num of highscores saved, display
+    //highscore list
+    for (var i = 0; i < highscores.initials.length; i++) {
+        var listEl = document.createElement("li");
+        var pEl = document.createElement("p");
+        pEl.setAttribute("class", "highscore");
+        pEl.textContent = highscores.initials[i] + " - " + highscores.scores[i];
+       //Add scores content to list element
+        listEl.appendChild(pEl);
+        //Append list element to highscores list
+        highscoreList.appendChild(listEl);
+    }
+}
