@@ -118,3 +118,50 @@ function compareAnswer(currentQuestion, buttonID) {
     }, 500);
     setTimeout(clearUserFeedback);
 }
+
+//Function to end the quiz
+//Use document.createElement to add text/multiple choice elements to page
+//and set class and ids, then set text content
+function endQuiz() {
+    //Create div for quiz end body
+    quizEnd = document.createElement("div");
+    quizEnd.setAttribute("class", "quiz-end");
+    //replace quiz with quiz end page
+    quizBody.replaceChild(quizEnd, quiz); 
+    //Create gameover header
+    var gaveOverEl = document.createElement("h2");
+    gaveOverEl.textContent = "Game Over";
+    //Create element to show user their score
+    var yourScoreEl = document.createElement("h3");
+    yourScoreEl.textContent = "You scored " + timeLeft + " points.";
+    //Create form element for user to input initials
+    var formEl = document.createElement("form");
+    formEl.setAttribute("class", "quiz-answers");
+    var labelEl = document.createElement("label");
+    labelEl.textContent = "Enter initials: ";
+    var inputEl = document.createElement("input");
+    inputEl.setAttribute("type", "text");
+    //Create submit initials button
+    var submitEl = document.createElement("input");
+    submitEl.setAttribute("type", "submit");
+    submitEl.setAttribute("id", "submit");
+    //Append header, score, form and buttons to quiz body
+    labelEl.appendChild(inputEl); //input to label
+    formEl.appendChild(labelEl); //label to form
+    formEl.appendChild(submitEl); //submit button to form
+    quizEnd.appendChild(gaveOverEl); //header to quiz end body
+    quizEnd.appendChild(yourScoreEl); //score to quiz end body
+    quizEnd.appendChild(formEl); // form to quiz end body
+    //Event listener to submit score, run save score function
+    submitEl.addEventListener("click", function (event) {
+        event.preventDefault();
+        //User must enter initials or something in box to save score
+        //If no highscore, page does not move
+        if (inputEl.value === "") {
+            return;
+        }
+        //If user inputs score, save score and  get highscores html
+        saveScore(inputEl.value, timeLeft);
+        window.location = "highscores.html";
+    });
+}
