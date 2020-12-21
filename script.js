@@ -88,3 +88,33 @@ function startQuiz() {
         }
     });
 }
+
+//Function to compare user answer to correct answer
+function compareAnswer(currentQuestion, buttonID) {
+    //Create div and p for Correct/Wrong message user will see for each response
+    var userFeedback = document.createElement("div");
+    var feedbackEl = document.createElement("p");
+    userFeedback.setAttribute("class", "userFeedback");
+    //Append feedback to user feedback div and that to the quiz body section
+    userFeedback.appendChild(feedbackEl);
+    quizBody.appendChild(userFeedback);
+    var correctAnswer = (questions[currentQuestion].choices[buttonID] === questions[currentQuestion].answer);
+    //If answer is correct or incorrect, user sees brief message pop up
+    if (correctAnswer) {
+        feedbackEl.textContent = "Correct!";
+    } else {
+        feedbackEl.textContent = "Wrong!";
+        if (timeLeft <= 10) {
+            timeLeft = 0;
+            clearInterval(timeLeft);
+        //If incorrect answer, 10 seconds off of the timer
+        } else {
+            timeLeft -= 10;
+        }
+    }
+    //Timeout function to set length of message popup
+    var clearUserFeedback = setTimeout(function () {
+        quizBody.removeChild(userFeedback);
+    }, 500);
+    setTimeout(clearUserFeedback);
+}
