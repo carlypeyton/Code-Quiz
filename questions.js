@@ -23,7 +23,12 @@ var questions = [
         question: "What method should one use to create a new HTML element by the specified tagname?",
         choices: ["document.createElement()", "Node.createElement()", "create.newElement()", "create.TextNode()"],
         answer: "document.createElement()"
-    // },
+    },
+    {
+        question: "Where is the Javascript placed inside an HTML document/page?",
+        choices: ["<body> and <head sections", "<meta> section", "<title> section", "<footer> section"],
+        answer: "<body> and <head sections",
+    },
     // {
     //     question: a,
     //     choices: a,
@@ -67,11 +72,6 @@ var questions = [
     // {
     //     question: a,
     //     choices: a,
-    //     answer: a,
-    // },
-    // {
-    //     question: a,
-    //     choices: a,
-    //     answer: a,
-    }
+    // //     answer: a,
+    // }
 ];
