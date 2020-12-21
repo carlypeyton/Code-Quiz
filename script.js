@@ -240,5 +240,16 @@ function saveScore(newInitials, newScore) {
 function clearHighscores() {
     //remove highscore from local storage
     localStorage.removeItem("highscores");
-    showHighscores();
+     showHighscores();
 }
+
+////////////////////////RUN TIME///////////////////////////////
+// Event listener for start quiz button
+document.querySelector("#start-button").addEventListener("click", function (event) {
+    startTimer(event);
+    startQuiz(event);
+});
+//Event listener for clear highscores
+document.getElementById("#submit").addEventListener("click", function (event) {
+    clearHighscores(event);
+});
