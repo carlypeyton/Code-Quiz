@@ -1,0 +1,239 @@
+/* View Highscores in top left corner */
+.viewscore {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    width: 150px;
+    height: 40px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    line-height: 2;
+    letter-spacing: 1px;
+    border: 3px solid blue;
+    background: whitesmoke;
+    color: rgb(19, 19, 197);
+    border-radius: 40px;
+    text-align: center;
+}
+
+/* Hover over View Highscores */
+a:hover {
+    background: blue;
+    color: #fff;
+}
+
+/* Time in top right corner */
+.nav-item {
+    color: white;
+    margin: 3%;
+    font-family: 'Ubuntu', sans-serif;
+    width: 120px;
+    height: 40px;
+    font-size: 1.15rem;
+    line-height: 2;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid red;
+    background: whitesmoke;
+    color: rgb(223, 8, 8);
+    border-radius: 40px;
+    text-align: center;
+}
+
+body {
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+
+/* Code quiz header */
+h1 {
+    font-family: 'Bungee Outline', cursive;
+    font-size: 9rem;
+    margin-top: 1rem;
+    line-height: .95;
+}
+
+/* High scores and Game over header */
+h2 {
+    font-family: 'Bungee Outline', cursive;
+    font-size: 7rem;
+    margin-top: 1rem;
+}
+
+/* Quiz Question styling */
+h3 {
+    font-family: 'Abel', sans-serif;
+    font-size: 2rem;
+    line-height: 1.25;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 4%;
+}
+
+/* Quiz body instructions */
+h5 {
+    font-family: 'Abel', sans-serif;
+    font-size: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+}
+
+/* Feedback styling */
+p {
+    font-family: 'Abel', sans-serif;
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Content Body */
+.quiz-body {
+    margin-right: 10%;
+    margin-right: 10%;
+}
+
+/* Enter initials styling */
+label {
+    font-family: 'Abel', sans-serif;
+    font-size: 2rem;
+}
+
+/* Styling for quiz question multiple choice list */
+ul {
+    list-style-type: none;
+}
+
+/* Start quiz button */
+#start-button {
+    margin: 3%;
+    font-family: 'Ubuntu', sans-serif;
+    height: 40px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid rgb(30, 161, 30);
+    background: whitesmoke;
+    color: rgb(47, 194, 47);
+    border-radius: 40px;
+    position: relative;
+    text-align: center;
+}
+
+/* Hover start quiz button */
+#start-button:hover {
+    background: rgb(30, 161, 30);
+    color: #fff;
+}
+
+/* Multiple choice question buttons */
+button {
+    color: white;
+    margin: .5rem;
+    font-family: 'Ubuntu', sans-serif;
+    width: 380px;
+    height: 80px;
+    font-size: 1.15rem;
+    line-height: 1.15;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid black;
+    background: whitesmoke;
+    color: black;
+    border-radius: 40px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Hover multiple choice question buttons */
+button:hover {
+    background: black;
+    color: #fff;
+}
+
+/* Styling for quiz questions body */
+.quiz-question {
+    margin-top: 3rem;
+}
+
+/*Styling for form*/
+form {
+    width: 300px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Submit initials button */
+#submit {
+    color: white;
+    margin: 3%;
+    font-family: 'Ubuntu', sans-serif;
+    width: 300px;
+    height: 40px;
+    font-size: 1.15rem;
+    line-height: 2;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid rgb(30, 161, 30);
+    background: whitesmoke;
+    color: rgb(47, 194, 47);
+    border-radius: 40px;
+    text-align: center;
+}
+
+/* Hover submit button */
+#submit:hover {
+    background: rgb(30, 161, 30);
+    color: #fff;
+}
+
+/* Back button  */
+#back {
+    color: white;
+    margin: 3%;
+    font-family: 'Ubuntu', sans-serif;
+    width: 150px;
+    height: 40px;
+    font-size: 1.15rem;
+    line-height: 2;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid blue;
+    background: whitesmoke;
+    color: rgb(19, 19, 197);
+    border-radius: 40px;
+    text-align: center;
+}
+
+/* Back button hover */
+#back:hover {
+    background: rgb(19, 19, 197);
+    color: #fff;
+}
+
+/* Clear highscores button */
+#clear-highscores {
+    color: white;
+    margin: 3%;
+    font-family: 'Ubuntu', sans-serif;
+    width: 150px;
+    height: 40px;
+    font-size: 1.15rem;
+    line-height: 2;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid red;
+    background: whitesmoke;
+    color: rgb(223, 8, 8);
+    border-radius: 40px;
+    text-align: center;
+}
+
+/* Clear highscores hover */
+#clear-highscores:hover {
+    background: red;
+    color: #fff;
+}
