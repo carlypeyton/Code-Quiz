@@ -107,7 +107,7 @@ function compareAnswer(currentQuestion, buttonID) {
         if (timeLeft <= 10) {
             timeLeft = 0;
             clearInterval(timeLeft);
-        //If incorrect answer, 10 seconds off of the timer
+            //If incorrect answer, 10 seconds off of the timer
         } else {
             timeLeft -= 10;
         }
@@ -127,7 +127,7 @@ function endQuiz() {
     quizEnd = document.createElement("div");
     quizEnd.setAttribute("class", "quiz-end");
     //replace quiz with quiz end page
-    quizBody.replaceChild(quizEnd, quiz); 
+    quizBody.replaceChild(quizEnd, quiz);
     //Create gameover header
     var gaveOverEl = document.createElement("h2");
     gaveOverEl.textContent = "Game Over";
@@ -184,19 +184,19 @@ var highscores = {
 //Function to get highscores
 function getHighscores() {
     //As long as there is at least 1 saved highscore, get highscores from local storage
-   var savedHighscoresString = localStorage.getItem("highscores");
-   if (savedHighscoresString !== null) {
-       //Parse highscores string
-       var savedHighscores = JSON.parse(savedHighscoresString);
-       highscores.initials = savedHighscores.initials; 
-       highscores.scores = savedHighscores.scores;
-   }
-   //If no highscores in list display empty array
-   else {
-       highscores.initials = [];
-       highscores.scores = [];
-       return;
-   }
+    var savedHighscoresString = localStorage.getItem("highscores");
+    if (savedHighscoresString !== null) {
+        //Parse highscores string
+        var savedHighscores = JSON.parse(savedHighscoresString);
+        highscores.initials = savedHighscores.initials;
+        highscores.scores = savedHighscores.scores;
+    }
+    //If no highscores in list display empty array
+    else {
+        highscores.initials = [];
+        highscores.scores = [];
+        return;
+    }
 }
 
 //If any scores are saved than run show scores function
@@ -216,7 +216,7 @@ function showHighscores() {
         var pEl = document.createElement("p");
         pEl.setAttribute("class", "highscore");
         pEl.textContent = highscores.initials[i] + " - " + highscores.scores[i];
-       //Add scores content to list element
+        //Add scores content to list element
         listEl.appendChild(pEl);
         //Append list element to highscores list
         highscoreList.appendChild(listEl);
@@ -240,16 +240,12 @@ function saveScore(newInitials, newScore) {
 function clearHighscores() {
     //remove highscore from local storage
     localStorage.removeItem("highscores");
-     showHighscores();
+    showHighscores();
 }
 
-////////////////////////RUN TIME///////////////////////////////
+////////////////////////Event listeners///////////////////////////////
 // Event listener for start quiz button
 document.querySelector("#start-button").addEventListener("click", function (event) {
     startTimer(event);
     startQuiz(event);
-});
-//Event listener for clear highscores
-document.getElementById("#submit").addEventListener("click", function (event) {
-    clearHighscores(event);
 });
