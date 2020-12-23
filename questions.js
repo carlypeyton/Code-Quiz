@@ -1,7 +1,7 @@
 var questions = [
     {
         question: "Under which HTML tag can you write the Javascript code?",
-        choices: ["<javascript>", "<scripts>", "<js>", "<script>"],
+        choices: ["<javascript>", "<script>", "<js>", "<script>"],
         answer: "<script>"
     },
     {
