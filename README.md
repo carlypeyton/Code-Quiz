@@ -30,8 +30,7 @@ I also updated the CSS for my quiz, styling the buttons, fonts, and layout. My l
 
 After learning about jQuery in class on Monday, it clicked that I could probably go back through much of my code and user jQuery to simplify and clean up. However, being short on time I decided to hold off on this, and come back to it after assignment submission. 
 
-One issue I had with this project was getting the url to my deployed application to work. I believe this was due to the fact that I have two html documents. To test this, I renamed the highscores.html to scores.html, so it would be listed after the index.html alphabetically. After trying this, my link worked. However, now I have two of the same file (highscore.html and score.html) saved in my Github repository. I am unsure how to delete one of these files, so will come back to this issue.
-
+One issue I had with this project was getting the url to my deployed application to work. I believe this was due to the fact that I have two html documents. To test this, I renamed the highscores.html to scores.html, so it would be listed after the index.html alphabetically. After trying this, my link worked. However, now I have two of the same file (highscore.html and score.html) saved in my Github repository. I am unsure how to delete one of these files, so will come back to this issue. Additionally, when the user gets enough answers wrong, the time and score should come back as 0. However, I had an issue getting the timer to reflect this, and instead it kept going down to -1.
 
 
 
