@@ -107,6 +107,7 @@ function compareAnswer(currentQuestion, buttonID) {
         if (timeLeft <= 10) {
             timeLeft = 0;
             clearInterval(timeLeft);
+            endQuiz();
             //If incorrect answer, 10 seconds off of the timer
         } else {
             timeLeft -= 10;
@@ -118,6 +119,7 @@ function compareAnswer(currentQuestion, buttonID) {
     }, 500);
     setTimeout(clearUserFeedback);
 }
+
 
 //Function to end the quiz
 //Use document.createElement to add text/multiple choice elements to page
