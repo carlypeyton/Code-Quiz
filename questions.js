@@ -29,49 +29,49 @@ var questions = [
         choices: ["<body> and <head sections", "<meta> section", "<title> section", "<footer> section"],
         answer: "<body> and <head sections",
     },
-    // {
-    //     question: a,
-    //     choices: a,
-    //     answer: a,
-    // },
-    // {
-    //     question: a,
-    //     choices: a,
-    //     answer: a,
-    // },
-    // {
-    //     question: a,
-    //     choices: a,
-    //     answer: a,
-    // },
-    // {
-    //     question: a,
-    //     choices: a,
-    //     answer: a,
-    // },
-    // {
-    //     question: a,
-    //     choices: a,
-    //     answer: a,
-    // },
-    // {
-    //     question: a,
-    //     choices: a,
-    //     answer: a,
-    // },
-    // {
-    //     question: a,
-    //     choices: a,
-    //     answer: a,
-    // },
-    // {
-    //     question: a,
-    //     choices: a,
-    //     answer: a,
-    // },
-    // {
-    //     question: a,
-    //     choices: a,
-    // //     answer: a,
-    // }
+    {
+        question: "This method calls a function for each element in the array.",
+        choices: ["while()", "loop()", "forEach()", "for()"],
+        answer: "forEach()",
+    },
+    {
+        question: "Which of the following is not a valid Javascript variable name?",
+        choices: ["2names", "FirstAndLast", "_first_and_last_names", "All of the above"],
+        answer: "2names",
+    },
+    {
+        question: "Which statement would you use to test for a specific condition?",
+        choices: ["Select", "If", "Switch", "For"],
+        answer: "If",
+    },
+    {
+        question: "This method of an Array object adds and/or removes elements from an array.",
+        choices: ["Reverse", "Shift", "Slice", "Splice"],
+        answer: "Splice",
+    },
+    {
+        question: "What does the 'this' keyword mean in Javascript?",
+        choices: ["Refers current object", "Refers previous object", "Variable which contains a value", "None of the above"],
+        answer: "Refers current object",
+    },
+    {
+        question: "What is the output of console.log(2 + 5 + '8')?",
+        choices: ["258", "NaN", "78", "Error"],
+        answer: "258",
+    },
+    {
+        question: "How does a FOR loop start?",
+        choices: ["for (i = 0; i <= 5; i++)", "for (i <= 5; i++)", "for (i = 0; i <= 5)", "for i = 1 to 5"],
+        answer: "for (i = 0; i <= 5; i++)",
+    },
+    {
+        question: "How do you add a comment in JavaScript?",
+        choices: ["<!--This is a comment-->", "/*This is a comment*/", "//This is a comment", "~This is a comment~"],
+        answer: "//This is a comment",
+    },
+    {
+        question: "What Javascript keyword declares a variable?",
+        choices: ["for", "var", "if", "create"],
+        answer: "var",
+    }
 ];
