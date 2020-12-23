@@ -1,3 +1,4 @@
+// Quiz Questions
 var questions = [
     {
         question: "Under which HTML tag can you write the Javascript code?",
