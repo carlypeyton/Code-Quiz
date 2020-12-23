@@ -163,7 +163,7 @@ function endQuiz() {
         }
         //If user inputs score, save score and  get highscores html
         saveScore(inputEl.value, timeLeft);
-        window.location = "highscores.html";
+        window.location = "scores.html";
     });
 }
 
@@ -250,3 +250,8 @@ document.querySelector("#start-button").addEventListener("click", function (even
     startTimer(event);
     startQuiz(event);
 });
+
+
+//If user gets enough questions wrong, time is going to -1 even though score says 0
+//Error for event listener
+//Error for replaceChild
