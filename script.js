@@ -120,7 +120,6 @@ function compareAnswer(currentQuestion, buttonID) {
     setTimeout(clearUserFeedback);
 }
 
-
 //Function to end the quiz
 //Use document.createElement to add text/multiple choice elements to page
 //and set class and ids, then set text content
