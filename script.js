@@ -105,7 +105,7 @@ function compareAnswer(currentQuestion, buttonID) {
     } else {
         feedbackEl.textContent = "Wrong!";
         if (timeLeft <= 10) {
-            timeLeft = 0;
+            timeLeft >= 0;
             clearInterval(timeLeft);
             endQuiz();
             //If incorrect answer, 10 seconds off of the timer
@@ -124,6 +124,7 @@ function compareAnswer(currentQuestion, buttonID) {
 //Use document.createElement to add text/multiple choice elements to page
 //and set class and ids, then set text content
 function endQuiz() {
+    stopTimer();
     //Create div for quiz end body
     quizEnd = document.createElement("div");
     quizEnd.setAttribute("class", "quiz-end");
