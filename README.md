@@ -42,7 +42,6 @@ THEN I can save my initials and score
 
 This application allows users to test their coding knowledge with the code quiz. Incorrect answers lose users 10 points. If the user has answered all of the questions, the timer stops and the quiz ends. Users are able to save and view highscores.
 
-
-
+For questions or additional information, please contact carlypeyton@gmail.com.
 
 
